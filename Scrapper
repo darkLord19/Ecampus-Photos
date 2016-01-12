@@ -1,0 +1,44 @@
+#!/bin/bash
+<<DOCUMENTATION
+This will enable you to download the batch photos of everyone
+from the ecampus website.
+
+This uses wget. So, if you haven't got it, you might want to 
+download it. A brilliant linux user I know once told a friend
+that it is the best download manager available.
+Plus it's command line.
+
+Hopefully I'll also add a part that checks if wget is installed and
+if it isn't then installs it but that hasn't been implemented yet.
+
+Part 1 
+Generate the IDs
+TODO: Divide into batches. Get photos of individual batches.
+
+Part 2
+Put the IDs in a file. That will enable us to just pass that file 
+to wget which will then read and do the rest.
+
+Link to use:
+https://ecampus.daiict.ac.in/webapp/intranet/StudentPhotos/201301442.jpg
+use --no-check-certificate with wget.
+--mirror mirrors the site                                        
+-no-parent makes sure that parent directories are not downloaded 
+-no-proxy to not use proxies even if env. var. is set.           
+-nH to make sure that host directories structure isn't used.     
+--cut-dirs to make sure that required # of directories are cut.  
+ -nH cuts one directory. So, cut-dirs needs to cut only the rest.
+
+Part 3
+Make sure that the things are foldered properly.
+DOCUMENTATION
+
+echo "Enter year (yyyy)"
+read YEAR
+if [[ $YEAR -le 2001 || $YEAR -ge 2016 ]]
+then
+    echo "Invalid year provided. Using current year: 2015"
+    YEAR=2014
+fi
+
+    

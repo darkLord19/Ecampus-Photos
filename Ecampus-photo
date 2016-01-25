@@ -1,5 +1,4 @@
-#!/bin/bash
-<<DOCUMENTATION
+
 This will enable you to download the batch photos of everyone
 from the ecampus website.
 
@@ -31,14 +30,3 @@ use --no-check-certificate with wget.
 
 Part 3
 Make sure that the things are foldered properly.
-DOCUMENTATION
-
-echo "Enter year (yyyy)"
-read YEAR
-if [[ $YEAR -le 2001 || $YEAR -ge 2016 ]]
-then
-    echo "Invalid year provided. Using current year: 2015"
-    YEAR=2014
-fi
-
-    

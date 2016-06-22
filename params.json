@@ -1,0 +1,6 @@
+{
+  "name": "Ecampus-photos",
+  "tagline": "",
+  "body": "This will enable you to download the batch photos of everyone\r\nfrom the ecampus website.\r\n\r\nThis uses wget. So, if you haven't got it, you might want to \r\ndownload it.\r\n\r\na1=Student ID to start download images from\r\na2=Student ID to stop downloading images\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
